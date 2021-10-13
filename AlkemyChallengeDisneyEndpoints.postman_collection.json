@@ -1,0 +1,693 @@
+{
+	"info": {
+		"_postman_id": "fa01ed55-2eb5-4e9a-a425-ace8215d05c5",
+		"name": "Alkemy Challenge Disney",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"username\":\"pablo-476@hotmail.com\",\r\n \"password\":\"contraseña\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"username\":\"pablo-476@hotmail.com\",\r\n \"password\":\"contraseña\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post genre",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"fantasia\",\r\n    \"img\":\"fantasia/1.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/genre",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"genre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get genres",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/genre",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"genre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get genre with id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/genre/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"genre",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update genre with id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"fantasia\",\r\n\"img\":\"fantasia/2.jpg\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/genre/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"genre",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post genre in movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/genre/2/movie/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"genre",
+						"2",
+						"movie",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete genre from movie",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/genre/2/movie/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"genre",
+						"2",
+						"movie",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete genre with id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/genre/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"genre",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"img\":\"movie/1.jpg\",\r\n \"tittle\":\"La Sirenita\",\r\n \"creationDate\":\"1989-12-07\",\r\n \"calification\":5,\r\n \"genreId\":1,\r\n \"genres\":[\r\n     {\r\n        \"name\":\"aventura\",\r\n        \"img\":\"aventura/1.jpg\"\r\n     },\r\n     {\r\n        \"name\":\"princesas\",\r\n        \"img\":\"princesas/1.jpg\"\r\n     }\r\n ],\r\n \"characters\":[\r\n{\r\n    \"img\":\"characters/1.jpg\",\r\n    \"name\":\"Ariel\",\r\n    \"age\":16,\r\n    \"weight\":45.5,\r\n    \"story\":\"es el personaje principal de la pelicula\"\r\n\r\n},\r\n{\r\n    \"img\":\"characters/2.jpg\",\r\n    \"name\":\"Ursula\",\r\n    \"age\":17,\r\n    \"weight\":80.5,\r\n    \"story\":\"es la antagonista y lucha contra la sirenita\"\r\n\r\n},\r\n{\r\n    \"img\":\"characters/3.jpg\",\r\n    \"name\":\"Flounder\",\r\n    \"age\":25,\r\n    \"weight\":4.5,\r\n    \"story\":\"es el mejor amigo de Ariel\"\r\n\r\n},\r\n{\r\n    \"img\":\"characters/4.jpg\",\r\n    \"name\":\"Sebastian\",\r\n    \"age\":25,\r\n    \"weight\":7.5,\r\n    \"story\":\"es un cangrejo gruñon,es el ayudante del rey triton\"\r\n\r\n}\r\n\r\n\r\n ]\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/movies/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movie with id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/movies/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movies filtered",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "La Sirenita",
+							"disabled": true
+						},
+						{
+							"key": "genreId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "desc",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movie with id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"img\":\"movie/2.jpg\",\r\n \"tittle\":\"la sirenita\",\r\n \"creationDate\":\"1989-12-07\",\r\n \"calification\":3,\r\n \"genreId\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/movies/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete movie with id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQwMzQ2NjIsImlhdCI6MTYzMzk5ODY2Mn0.amMGcqRFC4DeVAeSbMp-_Cjyj66v7qNMng-ASpcEFgY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/movies/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post character",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"img\":\"characters/5.jpg\",\r\n    \"name\":\"Mulan\",\r\n    \"age\":18,\r\n    \"weight\":45.5,\r\n    \"story\":\"es el personaje principal de la pelicula\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/characters",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get character with id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/characters/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get characters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/characters/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get characters filtered",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/characters?movies=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ariel",
+							"disabled": true
+						},
+						{
+							"key": "age",
+							"value": "16",
+							"disabled": true
+						},
+						{
+							"key": "movies",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update character with id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"img\":\"characters/5.jpg\",\r\n    \"name\":\"mulan\",\r\n    \"age\":20,\r\n    \"weight\":45.5,\r\n    \"story\":\"es el personaje principal de la pelicula\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/characters/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"5"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post character in movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/characters/5/movie/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"5",
+						"movie",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete character in movie",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/characters/5/movie/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"5",
+						"movie",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete character with id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsby00NzZAaG90bWFpbC5jb20iLCJleHAiOjE2MzQxMjg0MzgsImlhdCI6MTYzNDA5MjQzOH0.32fyT6SVHaAVpJfBVPgYD1ZW7OVyuDKOcNPUZvefT6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/characters/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
